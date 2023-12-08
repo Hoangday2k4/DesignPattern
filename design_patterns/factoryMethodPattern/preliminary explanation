@@ -1,0 +1,31 @@
+* Các thành phần chính của Factory Method Pattern:
+
+1, Product (Sản phẩm): Định nghĩa giao diện cho các đối tượng được tạo bởi factory method.
+
+2, ConcreteProduct (Sản phẩm cụ thể): Triển khai giao diện của Product để tạo ra một đối tượng cụ thể.
+
+3, Creator (Người tạo): Định nghĩa factory method, mà concrete creator sẽ triển khai để tạo ra một đối tượng Product. Có thể chứa các phương thức khác để làm việc với các sản phẩm được tạo.
+
+4, ConcreteCreator (Người tạo cụ thể): Triển khai factory method để tạo ra một đối tượng cụ thể của Product.
+
+* Quy trình hoạt động:
+
+1, Client sử dụng factory method để tạo đối tượng mà không cần biết lớp cụ thể của đối tượng đó.
+
+2, Creator định nghĩa một factory method để tạo ra đối tượng, nhưng không triển khai thực tế cách đối tượng được tạo.
+
+3, ConcreteCreator triển khai factory method để cung cấp cách cụ thể để tạo ra đối tượng.
+
+4, Client gọi factory method để nhận một đối tượng mới.
+
+* Ưu điểm của Factory Method Pattern:
+
+1, Tái sử dụng mã nguồn: Factory Method Pattern giúp tái sử dụng mã nguồn do nó tách biệt quá trình tạo đối tượng từ mã nguồn sử dụng đối tượng.
+
+2, Mở rộng dễ dàng: Nếu bạn muốn thêm một lớp mới, bạn chỉ cần triển khai factory method tương ứng mà không cần sửa đổi mã nguồn đã tồn tại.
+
+3, Giảm sự phụ thuộc: Factory Method giúp giảm sự phụ thuộc giữa client và các lớp cụ thể, giúp mã nguồn trở nên linh hoạt hơn.
+
+* Nhược điểm của Factory Method Pattern:
+
+1, Số lượng lớp tăng: Nếu có nhiều product, số lượng lớp có thể tăng lên nhanh chóng.

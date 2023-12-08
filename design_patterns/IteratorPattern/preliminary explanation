@@ -1,0 +1,29 @@
+* Các thành phần chính của Iterator Pattern:
+
+1, Iterator (Vòng lặp): Định nghĩa giao diện để duyệt qua tất cả các phần tử trong một tập hợp.
+
+2, ConcreteIterator (Vòng lặp cụ thể): Triển khai giao diện Iterator và duyệt qua các phần tử của tập hợp cụ thể.
+
+3, Aggregate (Tập hợp): Định nghĩa một giao diện để tạo ra một Iterator.
+
+4, ConcreteAggregate (Tập hợp cụ thể): Triển khai giao diện Aggregate và trả về một ConcreteIterator để duyệt qua các phần tử.
+
+5, Client (Khách hàng): Sử dụng Iterator để duyệt qua các phần tử của tập hợp mà không cần biết cách tập hợp được triển khai hoặc cấu trúc bên trong nó.
+
+* Quy trình hoạt động:
+
+1, Client yêu cầu một Iterator từ một Aggregate.
+
+2, Aggregate tạo và trả về một ConcreteIterator.
+
+3, Client sử dụng Iterator để duyệt qua các phần tử của Aggregate.
+
+* Ưu điểm của Iterator Pattern:
+
+1, Tách biệt chuỗi vòng lặp: Mẫu Iterator tách biệt chuỗi vòng lặp từ cấu trúc dữ liệu, giúp dễ dàng thay đổi cấu trúc dữ liệu mà không ảnh hưởng đến cách duyệt.
+
+2, Mô-đun hóa: Iterator Pattern giúp mô-đun hóa phần lặp của tập hợp, giúp giảm sự phụ thuộc giữa client và cấu trúc dữ liệu.
+
+* Nhược điểm của Iterator Pattern:
+
+1, Tăng độ phức tạp: Có thể tăng độ phức tạp của mã nguồn, đặc biệt là khi có nhiều lớp ConcreteIterator và ConcreteAggregate.

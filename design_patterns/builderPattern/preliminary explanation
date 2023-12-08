@@ -1,0 +1,23 @@
+* Các thành phần chính của Builder Pattern:
+
+1, Product (Sản phẩm): Đối tượng cuối cùng được tạo ra bởi Builder.
+
+2, Builder (Xây dựng): Giao diện chung để tạo ra một sản phẩm. Bao gồm các phương thức để thiết lập và nhận giá trị của các thành phần của sản phẩm.
+
+3, ConcreteBuilder (Xây dựng cụ thể): Triển khai giao diện của Builder để xây dựng và trả về một sản phẩm cụ thể.
+
+4, Director (Giám đốc): Quản lý quá trình xây dựng của đối tượng, tương tác với Builder để xây dựng sản phẩm theo một thứ tự cụ thể.
+
+* Ưu điểm của Builder Pattern:
+
+1, Tách rời quá trình xây dựng và biểu diễn: Builder Pattern cho phép bạn xây dựng một sản phẩm theo từng bước mà không cần biết chi tiết về cách sản phẩm được biểu diễn.
+
+2, Tạo ra sản phẩm phức tạp: Cho phép tạo ra các đối tượng phức tạp từ các thành phần cơ bản.
+
+3, Mã lỏng lẻo: Có thể thêm hoặc thay đổi các bước xây dựng mà không làm ảnh hưởng đến client.
+
+* Nhược điểm của Builder Pattern:
+
+1, Phức tạp hóa: Builder Pattern thường tạo ra một số lượng lớn các lớp và tăng độ phức tạp của mã nguồn.
+
+2, Số lượng lớp: Số lượng lớp tăng theo cấp số nhân với số lượng thành phần của sản phẩm.

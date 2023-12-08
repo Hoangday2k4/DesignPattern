@@ -1,0 +1,32 @@
+* Các thành phần chính của Abstract Factory Pattern:
+
+1, Abstract Factory (Gia công trừu tượng): Định nghĩa giao diện cho việc tạo ra các đối tượng họ. Thường bao gồm một tập hợp các phương thức tạo đối tượng.
+
+2, Concrete Factory (Gia công cụ thể): Triển khai giao diện của Abstract Factory để tạo ra các đối tượng cụ thể của một họ.
+
+3, Abstract Product (Sản phẩm trừu tượng): Định nghĩa một giao diện cho một họ các đối tượng mà Abstract Factory sẽ tạo ra.
+
+4, Concrete Product (Sản phẩm cụ thể): Triển khai giao diện của Abstract Product và cung cấp một cách cụ thể để tạo ra đối tượng.
+
+5, Client (Khách hàng): Sử dụng Abstract Factory và Abstract Product để tạo ra các đối tượng mà không cần biết chi tiết cụ thể về lớp nào được tạo ra.
+
+* Quy trình hoạt động:
+
+1, Client yêu cầu một đối tượng từ Abstract Factory bằng cách gọi một phương thức tạo đối tượng trên nó.
+
+2, Abstract Factory tạo và trả về một đối tượng cụ thể (Concrete Product) theo yêu cầu của Client.
+
+3, Client sử dụng đối tượng cụ thể được trả về mà không cần biết chi tiết về cách nó được tạo ra.
+
+* Ưu điểm của Abstract Factory Pattern:
+
+1, Loosely Coupled Code (Mã lỏng lẻo): Các client không phải biết chi tiết về cách các đối tượng được tạo ra, giúp giảm sự phụ thuộc giữa client và các đối tượng cụ thể.
+
+2, Dễ mở rộng: Thêm các loại mới của đối tượng chỉ đòi hỏi thêm một số lớp mới và chỉnh sửa Abstract Factory, không làm thay đổi client.
+
+3, Phù hợp với nguyên tắc "Mở cho mở rộng, đóng cho sửa đổi" (Open/Closed Principle): Bạn có thể mở rộng hệ thống mà không cần sửa đổi mã hiện tại.
+
+* Nhược điểm của Abstract Factory Pattern:
+
+Phức tạp: Khi số lượng lớn các loại đối tượng và các loại đối tượng cụ thể có thể thay đổi thường xuyên, Abstract Factory Pattern có thể trở nên phức tạp và khó bảo trì.
+Abstract Factory Pattern là một trong những mẫu thiết kế quan trọng, đặc biệt là khi bạn muốn tạo ra các đối tượng liên quan hoặc phụ thuộc mà không muốn làm cho client phụ thuộc vào các lớp cụ thể.

@@ -1,0 +1,33 @@
+* Các thành phần chính của Command Pattern:
+
+1, Command (Lệnh): Định nghĩa một giao diện cho việc thực hiện một hành động cụ thể.
+
+2, ConcreteCommand (Lệnh cụ thể): Triển khai giao diện Command và liên kết với một đối tượng Receiver. Chịu trách nhiệm thực hiện hành động cụ thể khi được gọi.
+
+3, Invoker (Người gọi): Yêu cầu một đối tượng Command để thực hiện yêu cầu.
+
+4, Receiver (Người nhận): Biết cách thực hiện các yêu cầu liên quan đến hành động cụ thể.
+
+5, Client (Khách hàng): Tạo ra đối tượng Command và cấu hình nó với một đối tượng Receiver. Cũng có thể cấu hình Invoker nếu cần thiết.
+
+* Quy trình hoạt động:
+
+1, Client tạo một đối tượng Command và liên kết nó với một đối tượng Receiver.
+
+2, Client cũng có thể liên kết Command với một đối tượng Invoker nếu muốn.
+
+3, Client chuyển đối tượng Command cho Invoker hoặc lưu trữ nó cho việc sử dụng sau.
+
+4, Invoker sẽ gọi phương thức thực hiện của Command, và Command sẽ gọi phương thức thực hiện của Receiver để thực hiện hành động cụ thể.
+
+* Ưu điểm của Command Pattern:
+
+1, Giảm sự phụ thuộc: Tách biệt người gửi yêu cầu và người xử lý yêu cầu, giảm sự phụ thuộc giữa client và receiver.
+
+2, Dễ mở rộng: Dễ mở rộng hệ thống với các lệnh mới bằng cách triển khai các lớp Command mới.
+
+3, Undo/Redo: Dễ dàng thêm tính năng hoàn tác và làm lại bằng cách lưu các lệnh đã thực hiện.
+
+* Nhược điểm của Command Pattern:
+
+1, Số lượng lớp tăng: Số lượng lớp có thể tăng nếu có nhiều lệnh và người nhận.
